@@ -1,0 +1,36 @@
+<div xmlns:filter="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+  <h4 id="name" *ngIf='this.recipe'>
+      {{this.getName()}}
+  </h4>
+
+
+  <div class="description">
+    <div class="main-info">
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item main-info-time">{{this.getTime()}} minutes</li>
+        <li class="list-group-item main-info-qty">{{this.getQty()}} personnes</li>
+        <li class="list-group-item main-info-difficulty">Difficulté : {{this.getChallenge()}}</li>
+        <li class="list-group-item main-info-price">{{this.getPrice()}} euros</li>
+      </ul>
+    </div>
+    <div *ngIf="this.getIngredients()" class="ingredients">
+      <h6>Ingrédients</h6>
+      <ul  class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ing of this.getIngredients()">
+          {{ing.name}}
+          <span class="badge badge-primary badge-pill">
+            {{ing.quantity}} {{ing.unity}}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="this.getStep()" class="preparation">
+      <div class="alert alert-dark" role="alert" *ngFor="let steps of this.getStep()">
+        {{steps.action}}
+        <button type="button" class="btn btn-outline-primary startButton">Commencer</button>
+      </div>
+    </div>
+  </div>
+  <!-- <button (click)="delete()"> <a routerLink="/recipes/delete/{{this.recipe.id}}"> Delete this recipe </a> </button>
+  -->
+</div>

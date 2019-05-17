@@ -1,0 +1,13 @@
+<div class="recipe-home-search__content div-picture">
+  <div class="defaultPicture">
+    <input [(ngModel)]="searchText" class="form_control searchBarre" placeholder="Search recipe" type="text"/>
+  </div>
+</div>
+<ul>
+  <li *ngFor="let book of this.allBooks| BookTitlefilter:searchText">
+    <a routerLink="/books/{{book.id}}">
+      {{book.name}}
+    </a>
+    <!--<button (click)="delete(book.id)"> Delete this recipe </button>-->
+  </li>
+</ul>

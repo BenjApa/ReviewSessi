@@ -1,0 +1,6 @@
+.list-menu{
+  flex-direction: initial !important;
+}
+.nav-link{
+  padding-right: 5px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CokO App</title>
+  <!--The content below is only a placeholder and can be replaced.-->
+</head>
+<body>
+<div style="text-align:center">
+  <span *ngIf="update"> There is an update for your CokO app </span>
+</div>
+
+<nav collapsed="true" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a routerLink="/" routerLinkActive="active">
+    <img src="../assets/images/favicon-32x32.png" alt="logo">
+  </a>
+
+  <div  class="" id="navbarNavAltMarkup">
+    <div class="navbar-nav list-menu" >
+      <a class="nav-link nav-link" routerLink="/recipes" routerLinkActive="active">View all recipes</a>
+      <a class="nav-link nav-link" routerLink="/recipes/create" routerLinkActive="active" >New Recipe</a>
+      <a class="nav-link nav-link" routerLink="/books/create" routerLinkActive="active" >New Catalog</a>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+</body>
+</html>
+
+
+
+
+<!--
+1- Liste de tous les catalogues
+2- Lien vers une page pour créer une nouvelle recette
+3- Menu pour:
+  - Créer un catalogue
+  - Voir toutes les recettes
+4- Footer
+-->
+
+
+
+
+
+
