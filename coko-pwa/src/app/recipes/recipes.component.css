@@ -1,0 +1,32 @@
+.defaultPicture{
+  /* The image used */
+  background-image: url("../../assets/images/recipes.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.5;
+
+  /* Text */
+  text-align: center;
+  position: relative;
+}
+
+.titlePage{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 25%;
+  width: 50%;
+  color: black;
+}
+
+.div-picture{
+  padding-top: 56px;
+}
